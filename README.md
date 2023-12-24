@@ -9,7 +9,7 @@ It demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Grad
 <p align="left">
   <a href="#"><img src="./frontend/test1.jpeg" width="200"></a> <br />
   <em> 
-    Model Output: `king penguin: 0.99`.
+  Model Output Lakeland Terrier 29%
   </em>
 </p>
 
