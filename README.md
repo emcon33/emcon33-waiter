@@ -1,11 +1,11 @@
 # Image Recognition Waiter
+#source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+# Modifying for Podman and OpenShift use 
+# Updating Images for RH dog dog 
 
 This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. 
 
 It demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Gradio` and `Docker`.
-
-***A detailed writeup is published in [Towards AI](https://medium.com/towards-artificial-intelligence/build-and-deploy-custom-docker-images-for-object-recognition-d0d127b2603b)!***
-
 <p align="left">
   <a href="#"><img src="./frontend/test1.jpeg" width="200"></a> <br />
   <em> 
