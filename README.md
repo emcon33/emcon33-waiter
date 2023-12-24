@@ -16,7 +16,7 @@ It demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Grad
 
 Output Example
 <p align="left">
-  <a href="#"><img src="./frontend/sample.jpeg" width="200"></a> <br />
+  <a href="#"><img src="./frontend/sample.jpeg" width="400"></a> <br />
   <em> 
   Model Output 
   </em>
