@@ -9,7 +9,7 @@ It demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Grad
 <p align="left">
   <a href="#"><img src="./frontend/test1.jpeg" width="200"></a> <br />
   <em> 
-  Model Output Lakeland Terrier 29%
+  Model Input 
   </em>
 </p>
 
@@ -17,22 +17,22 @@ Output Example
 <p align="left">
   <a href="#"><img src="./frontend/sample.jpeg" width="200"></a> <br />
   <em> 
-  Model Output Lakeland Terrier 29%
+  Model Output 
   </em>
 </p>
 
 ### Usage Docker
-To launch the application, run for docker:
+To launch the application, run for docker: (pulls pre-built containers) 
 ```
 git clone https://github.com/hasibzunair/imagercg-waiter
 sh deploy.sh 
 ```
 
 ### Usage Podman
-To launch the application, run for docker:
+To launch the application, run for Podman:
 ```
-git clone https://github.com/hasibzunair/imagercg-waiter
-sh deploy.sh 
+git clone https://github.com/emcon33/emcon33-waiter
+sh deploypodman.sh 
 ```
 
 The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction, or simply use the examples! For details on how the `frontend` and `backend` components were built, see respective folders. 
