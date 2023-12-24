@@ -1,8 +1,7 @@
 # Image Recognition Waiter
-# source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
-# forked from this project: https://github.com/hasibzunair/imagercg-waiter
-# Modifying for Podman and OpenShift use 
-# Updating Images for RH dog images
+source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+forked from this project: https://github.com/hasibzunair/imagercg-waiter
+Updating images, converting to Podman and run on OpenShift and ROSA AWS OpenShift Managed Service 
 
 This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. 
 
@@ -13,10 +12,10 @@ It demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Grad
   Model Input 
   </em>
 </p>
-
 Output Example
+
 <p align="left">
-  <a href="#"><img src="./frontend/sample.jpeg" width="400"></a> <br />
+  <a href="#"><img src="./frontend/sample.jpeg" width="200"></a> <br />
   <em> 
   Model Output 
   </em>
