@@ -1,5 +1,6 @@
 # Image Recognition Waiter
-#source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+# source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+# forked from this project: https://github.com/hasibzunair/imagercg-waiter
 # Modifying for Podman and OpenShift use 
 # Updating Images for RH dog images
 
@@ -37,13 +38,10 @@ sh deploypodman.sh
 
 The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction, or simply use the examples! For details on how the `frontend` and `backend` components were built, see respective folders. 
 
-### Note
-I did this project after completing [Docker for the Absolute Beginner - Hands On - DevOps](https://www.udemy.com/course/learn-docker/).
-
 #### Todos
-* Google cloud run for backend
-* Docker compose
-* Kubernetes (make some pods lol!)
+* Port to Podman
+* Port to OpenShift/ROSA
+* Rebuild as Workshop for AWS ROSA
 
 ### References
-Also see [learn-docker](https://github.com/hasibzunair/learn-docker).
+Forked from this github https://github.com/hasibzunair/imagercg-waiter
