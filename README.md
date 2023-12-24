@@ -1,5 +1,6 @@
 # Image Recognition Waiter
-source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+Original source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+
 forked from this project: https://github.com/hasibzunair/imagercg-waiter
 Updating images, converting to Podman and run on OpenShift and ROSA AWS OpenShift Managed Service 
 
