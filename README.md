@@ -24,20 +24,21 @@ Output Example
 
 ### Usage Docker
 To launch the application, run for docker: (pulls pre-built containers) 
-```
 git clone https://github.com/emcon33/emcon33-waiter
-```
+
 
 Backend Only Direct Curl Upload 
->Direct Image docker.io/andrewwg/classification_model_serving 
+>Direct Pre-Built Image docker.io/andrewwg/classification_model_serving
+>cd<path>/backend
 >docker build -t classification_model_serving .
 >docker run -p 8000:80 classification_model_serving
 >curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
 
-
 Front End Build and Deploy (current error on vartiable error)
->docker build -t andrewwg/frontend_serving .
->docker run -p 7860:7860 --add-host host.docker.internal:host-gateway andrewwg/frontend_serving
+>Direct Pre-Built Image docker.io hasibzunair/frontend_serving
+cd<path>/frontend
+>docker build -t frontend_serving .
+>docker run -p 7860:7860 --add-host host.docker.internal:host-gateway frontend_serving
 
 Broken with this message 
 (base) agrimes@andys-mbp frontend % docker run -p 7860:7860 --add-host host.docker.internal:host-gateway andrewwg/frontend_serving 
@@ -59,5 +60,5 @@ In Development
 * Rebuild as Workshop for AWS ROSA
 
 ### References
-# Original source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
-#Forked from this github https://github.com/hasibzunair/imagercg-waiter
+Original source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+Forked from this github https://github.com/hasibzunair/imagercg-waiter
