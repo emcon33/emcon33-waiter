@@ -33,6 +33,7 @@ Backend Only Direct Curl Upload
 >docker run -p 8000:80 classification_model_serving
 >curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
 <text output>
+{"success":true,"predictions":[{"label":"black-and-tan coonhound","probability":0.5641617774963379},{"label":"Doberman","probability":0.3869141638278961},{"label":"bluetick","probability":0.012455757707357407},{"label":"Rottweiler","probability":0.007904204539954662},{"label":"Gordon setter","probability":0.006333122029900551}]}%
 
 Web Front End Build and Deploy (current error on vartiable error)
 >Direct Pre-Built Image docker.io hasibzunair/frontend_serving
