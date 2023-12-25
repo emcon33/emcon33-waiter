@@ -23,7 +23,7 @@ Output Example
 
 ### Usage Docker
 To launch the application, run for docker: (pulls pre-built containers) 
-git clone https://github.com/emcon33/emcon33-waiter
+>git clone https://github.com/emcon33/emcon33-waiter
 
 
 Backend Only Direct Curl Upload 
