@@ -18,7 +18,6 @@ Output Example
 <p align="left">
   <a href="#"><img src="./frontend/sample.jpeg" width="200"></a> <br />
   <em> 
-  Model Output 
   </em>
 </p>
 
@@ -33,8 +32,9 @@ Backend Only Direct Curl Upload
 >docker build -t classification_model_serving .
 >docker run -p 8000:80 classification_model_serving
 >curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
+<text output>
 
-Front End Build and Deploy (current error on vartiable error)
+Web Front End Build and Deploy (current error on vartiable error)
 >Direct Pre-Built Image docker.io hasibzunair/frontend_serving
 cd<path>/frontend
 >docker build -t frontend_serving .
