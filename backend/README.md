@@ -1,12 +1,12 @@
 # PyTorch + FastAPI Backend
 
-Serves a dockerized deep learning image classification model using FastAPI. I used an ImageNet pretrained model that can predict 1000 different classes of general objects. See class list [here](https://deeplearning.cms.waikato.ac.nz/user-guide/class-maps/IMAGENET/).
+Serves a containerized Resnet18 deep learning image classification model using FastAPI. We used an ImageNet pretrained model that can predict 1000 different classes of general objects. See class list [here](https://deeplearning.cms.waikato.ac.nz/user-guide/class-maps/IMAGENET/).
 
 ### Local development
 To use this code for local development, install the requirements using (make sure Python version is 3.8):
 ```bash
-git clone https://github.com/hasibzunair/imagercg-waiter
-cd imagercg-waiter/backend
+git clone https://github.com/emcon33/emcon33-waiter
+cd emcon33-waiter/backend
 pip install -r requirements.txt
 ```
 Now, you're setup!
