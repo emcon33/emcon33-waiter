@@ -1,12 +1,12 @@
-# Image Recognition Waiter
-# Original source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+# Image Recognition MVP tool for testing AI Inference using Reesnet18 Waiter 2 tier app. 
+Forked from this project: https://github.com/hasibzunair/imagercg-waiter
 
-# Forked from this project: https://github.com/hasibzunair/imagercg-waiter
+Currently: 
 Updating images, converting to Podman and run on OpenShift and ROSA AWS OpenShift Managed Service 
 
-This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. 
+This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. This workshop demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Gradio` and `Docker`.
 
-It demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Gradio` and `Docker`.
+Sample: 
 <p align="left">
   <a href="#"><img src="./frontend/test1.jpeg" width="200"></a> <br />
   <em> 
@@ -25,18 +25,33 @@ Output Example
 ### Usage Docker
 To launch the application, run for docker: (pulls pre-built containers) 
 ```
-git clone https://github.com/hasibzunair/imagercg-waiter
-sh deploy.sh 
+git clone https://github.com/emcon33/emcon33-waiter
 ```
+
+Backend Only Direct Curl Upload 
+>Direct Image docker.io/andrewwg/classification_model_serving 
+>docker build -t classification_model_serving .
+>docker run -p 8000:80 classification_model_serving
+>curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
+
+
+Front End Build and Deploy (current error on vartiable error)
+>docker build -t andrewwg/frontend_serving .
+>docker run -p 7860:7860 --add-host host.docker.internal:host-gateway andrewwg/frontend_serving
+
+Broken with this message 
+(base) agrimes@andys-mbp frontend % docker run -p 7860:7860 --add-host host.docker.internal:host-gateway andrewwg/frontend_serving 
+Traceback (most recent call last):
+  File "/app/main.py", line 32, in <module>
+    inputs = gr.inputs.Image(type='filepath')
+AttributeError: module 'gradio' has no attribute 'inputs'
+
+The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via Curl or Web Front End. 
 
 ### Usage Podman
-To launch the application, run for Podman:
-```
-git clone https://github.com/emcon33/emcon33-waiter
-sh deploypodman.sh 
-```
+In Development 
 
-The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction, or simply use the examples! For details on how the `frontend` and `backend` components were built, see respective folders. 
+
 
 #### Todos
 * Port to Podman
@@ -44,4 +59,5 @@ The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction, or
 * Rebuild as Workshop for AWS ROSA
 
 ### References
-Forked from this github https://github.com/hasibzunair/imagercg-waiter
+# Original source https://towardsai.net/p/machine-learning/build-and-deploy-custom-docker-images-for-object-recognition
+#Forked from this github https://github.com/hasibzunair/imagercg-waiter
