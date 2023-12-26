@@ -72,10 +72,12 @@ AttributeError: module 'gradio' has no attribute 'inputs'
 #Direct Front End Pre-Built Image 
 
 #docker pull hasibzunair/frontend_serving
+
 #docker run -p 7860:7860 --add-host host.docker.internal:host-gateway /hasibzunair/frontend_serving
 
 
-#Usage Podman <
+#Alternative Usage Podman Deployment
+
 #Backend
 #podman build -t classification_model_serving .
 
@@ -85,7 +87,7 @@ AttributeError: module 'gradio' has no attribute 'inputs'
 
 
 Frontend 
-<see error above> gradio import issue 
+<see error above> gradio import issue on Gradio
 
 #### Todos
 * Build Frontend (Gradio/Python version issue) 
