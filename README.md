@@ -50,9 +50,13 @@ AttributeError: module 'gradio' has no attribute 'inputs'
 The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via Curl or Web Front End. 
 
 ### Usage Podman
-In Development 
+Backend
+>podman build -t classification_model_serving .
+>podman run -p 8000:80 --name cls-serve classification_model_serving
+>curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
 
-
+Frontend 
+<see error above>
 
 #### Todos
 * Port to Podman
