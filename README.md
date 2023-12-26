@@ -1,6 +1,7 @@
-#Deep Learning Image Recognition Inference for using Resnet18 app 
+#Deep Learning Image Recognition Inference for using ResNet-18 based app 
 
 Forked from this project: https://github.com/hasibzunair/imagercg-waiter
+ResNet18 https://www.mathworks.com/help/deeplearning/ref/resnet18.html
 
 This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. This workshop demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Gradio` and `Docker`.
 It can be run via API backend with Curl or a Web Front End. 
