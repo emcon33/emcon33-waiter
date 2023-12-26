@@ -1,5 +1,7 @@
 #Deep Learning Image Recognition Inference for using Reesnet18 app 
+
 Forked from this project: https://github.com/hasibzunair/imagercg-waiter
+
 This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. This workshop demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Gradio` and `Docker`.
 
 Currently: 
