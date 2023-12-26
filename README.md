@@ -1,4 +1,4 @@
-# Image Recognition MVP tool for testing AI Inference using Reesnet18 Waiter 2 tier app. 
+ddddd# Image Recognition MVP tool for testing AI Inference using Reesnet18 Waiter 2 tier app. 
 Forked from this project: https://github.com/hasibzunair/imagercg-waiter
 
 Currently: 
@@ -30,8 +30,11 @@ Backend Only Direct Curl Upload
 >Direct Pre-Built Image docker.io/andrewwg/classification_model_serving
 >cd<path>/backend
 >docker build -t classification_model_serving .
+
 >docker run -p 8000:80 classification_model_serving
+
 >curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
+>
 <text output>
 {"success":true,"predictions":[{"label":"black-and-tan coonhound","probability":0.5641617774963379},{"label":"Doberman","probability":0.3869141638278961},{"label":"bluetick","probability":0.012455757707357407},{"label":"Rottweiler","probability":0.007904204539954662},{"label":"Gordon setter","probability":0.006333122029900551}]}%
 
@@ -54,8 +57,11 @@ The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via
 #Usage Podman
 #Backend
 #podman build -t classification_model_serving .
+
 #podman run -p 8000:80 --name cls-serve classification_model_serving
+
 #curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
+
 
 Frontend 
 <see error above>
