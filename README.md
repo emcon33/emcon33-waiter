@@ -1,4 +1,4 @@
-#Deep Learning Image Recognition Inference for using Reesnet18 app 
+#Deep Learning Image Recognition Inference for using Resnet18 app 
 
 Forked from this project: https://github.com/hasibzunair/imagercg-waiter
 
