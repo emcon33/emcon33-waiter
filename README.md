@@ -28,12 +28,9 @@ Sample Web FrontEnd Output:
 </p>
 
 ### Usage Docker
-To launch the application, run for docker: (pulls pre-built containers) 
+To Build and run the application Clone the source files. 
+
 #git clone https://github.com/emcon33/emcon33-waiter
-
-#Backend Only Direct Curl Upload
-
-#Direct Pre-Built Image docker.io/andrewwg/classification_model_serving
 
 #cd<path>/backend
 
@@ -46,9 +43,14 @@ To launch the application, run for docker: (pulls pre-built containers)
 <text output>
 {"success":true,"predictions":[{"label":"black-and-tan coonhound","probability":0.5641617774963379},{"label":"Doberman","probability":0.3869141638278961},{"label":"bluetick","probability":0.012455757707357407},{"label":"Rottweiler","probability":0.007904204539954662},{"label":"Gordon setter","probability":0.006333122029900551}]}%
 
-Web Front End Build and Deploy (current error on vartiable error)
+If you have issues with the build the pre-built image for the backend is avaialble here.
 
-#Direct Pre-Built Image docker.io hasibzunair/frontend_serving
+#docker pull /andrewwg/classification_model_serving
+#docker run -p 8000:80 classification_model_serving
+#curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
+
+
+Web Front End Build and Deploy (current error on vartiable error)
 
 #cd<path>/frontend
 
@@ -56,6 +58,7 @@ Web Front End Build and Deploy (current error on vartiable error)
 
 #docker run -p 7860:7860 --add-host host.docker.internal:host-gateway frontend_serving
 
+The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via Curl or Web Front End. 
 
 <Gradio won't import on my system>
 Broken with this message 
@@ -65,9 +68,14 @@ Traceback (most recent call last):
     inputs = gr.inputs.Image(type='filepath')
 AttributeError: module 'gradio' has no attribute 'inputs'
 
-The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via Curl or Web Front End. 
 
-#Usage Podman
+#Direct Front End Pre-Built Image 
+
+#docker pull hasibzunair/frontend_serving
+#docker run -p 7860:7860 --add-host host.docker.internal:host-gateway /hasibzunair/frontend_serving
+
+
+#Usage Podman <
 #Backend
 #podman build -t classification_model_serving .
 
@@ -77,7 +85,7 @@ The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via
 
 
 Frontend 
-<see error above>
+<see error above> gradio import issue 
 
 #### Todos
 * Port to Podman
