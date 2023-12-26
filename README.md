@@ -92,6 +92,11 @@ AttributeError: module 'gradio' has no attribute 'inputs'
 Frontend 
 <see error above> gradio import issue on Gradio
 
+#OpenShift/ROSA Deployment
+
+#ArgoCD/Tekton Pipeline 
+
+
 #### Todos
 * Build Frontend (Gradio/Python version issue) 
 * Port to Podman 
