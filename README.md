@@ -23,7 +23,7 @@ Output Example
 
 ### Usage Docker
 To launch the application, run for docker: (pulls pre-built containers) 
->git clone https://github.com/emcon33/emcon33-waiter
+git clone https://github.com/emcon33/emcon33-waiter
 
 
 Backend Only Direct Curl Upload 
@@ -52,8 +52,11 @@ The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via
 
 ### Usage Podman
 Backend
+
 podman build -t classification_model_serving .
+
 podman run -p 8000:80 --name cls-serve classification_model_serving
+
 curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
 
 Frontend 
