@@ -3,24 +3,24 @@
 Forked from this project: https://github.com/hasibzunair/imagercg-waiter
 
 This application *serves* a deep learning image classification model that recognizes what object is present in an image. It accepts images from the user, makes request to an API endpoint that makes a prediction, and shows results in a frontend UI. This workshop demonstrates use-cases of different tools such as `PyTorch`, `FastAPI`, `Gradio` and `Docker`.
+It can be run via API backend with Curl or a Web Front End. 
 
 Currently: 
 Updating images, converting to Podman and run on OpenShift and ROSA AWS OpenShift Managed Service 
 
-Sample Input Image: 
+Sample Backend Input Image: 
 <p align="left">
   <a href="#"><img src="./frontend/test1.jpeg" width="200"></a> <br />
   <em> 
-  Model Input 
   </em>
 </p>
 
-Sample Test Output:
+Sample Text Output for Backend:
 
 {"success":true,"predictions":[{"label":"black-and-tan coonhound","probability":0.5641617774963379},{"label":"Doberman","probability":0.3869141638278961},{"label":"bluetick","probability":0.012455757707357407},{"label":"Rottweiler","probability":0.007904204539954662},{"label":"Gordon setter","probability":0.006333122029900551}]}%
 
 
-Sample Web Output:
+Sample Web FrontEnd Output:
 <p align="left">
   <a href="#"><img src="./frontend/sample.jpeg" width="200"></a> <br />
   <em> 
