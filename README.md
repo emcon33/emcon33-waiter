@@ -41,6 +41,7 @@ cd<path>/frontend
 >docker build -t frontend_serving .
 >docker run -p 7860:7860 --add-host host.docker.internal:host-gateway frontend_serving
 
+<Gradio won't import on my system>
 Broken with this message 
 (base) agrimes@andys-mbp frontend % docker run -p 7860:7860 --add-host host.docker.internal:host-gateway andrewwg/frontend_serving 
 Traceback (most recent call last):
@@ -50,14 +51,11 @@ AttributeError: module 'gradio' has no attribute 'inputs'
 
 The app is live in `http://0.0.0.0:7860`. Upload images to make a prediction via Curl or Web Front End. 
 
-### Usage Podman
-Backend
-
-podman build -t classification_model_serving .
-
-podman run -p 8000:80 --name cls-serve classification_model_serving
-
-curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
+#Usage Podman
+#Backend
+#podman build -t classification_model_serving .
+#podman run -p 8000:80 --name cls-serve classification_model_serving
+#curl -X POST -F image=@test2.jpeg "http://0.0.0.0:8000/api/predict"
 
 Frontend 
 <see error above>
