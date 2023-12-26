@@ -76,6 +76,9 @@ AttributeError: module 'gradio' has no attribute 'inputs'
 #docker run -p 7860:7860 --add-host host.docker.internal:host-gateway /hasibzunair/frontend_serving
 
 
+
+
+
 #Alternative Usage Podman Deployment
 
 #Backend
